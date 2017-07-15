@@ -4,5 +4,13 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase:{
+    apiKey: "AIzaSyDuQKnbM5CE_NkIbjcM9i7H64TZPqWylhQ",
+    authDomain: "web-whatsapp-d870a.firebaseapp.com",
+    databaseURL: "https://web-whatsapp-d870a.firebaseio.com",
+    projectId: "web-whatsapp-d870a",
+    storageBucket: "",
+    messagingSenderId: "754600677665"
+  }
 };
