@@ -20,7 +20,7 @@ import { MdCardModule, MdButtonModule, MdCheckboxModule, MdListModule } from '@a
 import {MdMenuModule} from '@angular/material';
 import 'hammerjs';
 import { NewChatComponent } from './new-chat/new-chat.component';
-
+import { ChatitemComponent } from './chat-list/chatitem/chatitem.component';
 
 
 export const firebaseConfig = {
@@ -39,7 +39,8 @@ export const firebaseConfig = {
     ChatListComponent,
     ChatWindowComponent,
     ProfileComponent,
-    NewChatComponent
+    NewChatComponent,
+    ChatitemComponent
   ],
   imports: [
     BrowserModule,

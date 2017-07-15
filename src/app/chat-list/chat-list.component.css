@@ -1,0 +1,14 @@
+md-list {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    background-color: #fefefe;
+    z-index: 1;
+    padding-bottom: 10px;
+}
+md-list-item{
+	margin-bottom: 10px;
+}

@@ -1,0 +1,53 @@
+.single-item-main {
+    display: flex;
+}
+
+.chat-body:hover .more {
+    display: block;
+}
+
+.single-item-main .profile-image {
+    width: 49px;
+    height: 49px;
+    padding: 0 15px 0 13px;
+}
+
+.single-item-main .chat-body {
+    border-top: 1px solid #f2f2f2;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    min-width: 0;
+}
+
+.single-item-main .profile-image img {
+    width: inherit;
+    border-radius: 100%;
+}
+
+.chat-body .up-container .posted-time {
+    margin-left: 6px;
+    font-size: 12px;
+}
+
+.chat-body .up-container .chat-title {
+    overflow: hidden;
+}
+
+.chat-body .last-message {
+    font-size: 13px;
+    line-height: 19px;
+    margin-top: 3px;
+}
+
+.more {
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    display: none;
+}
