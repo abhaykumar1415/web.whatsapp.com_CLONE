@@ -1,21 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <md-card *ngIf = "showId" layout-align="center center">
+<span *ngIf="!openChat">
   <img src ="http://comicsalliance.com/files/2017/03/Hot-Toys-Spider-Man-Homecoming-Homemade-Suit.jpg" (click)="toggleSelect()" md-card-avatar >
-  <!-- <md-menu #appMenu="mdMenu">
-    <button md-menu-item> New Group </button>
-    <button md-menu-item> profile </button>
-    <button md-menu-item> Archived </button>
-    <button md-menu-item> Starred </button>
-    <button md-menu-item> Settings </button>
-    <button md-menu-item> Log Out </button>
-
-  </md-menu> -->
-
-  <!-- <button md-icon-button [mdMenuTriggerFor]="appMenu">
-     <md-icon>more_vert</md-icon>
-  </button> -->
   <div class="right-align">
-    <i class="material-icons textsms">textsms</i>
+    <i class="material-icons textsms" *ngIf="chatIcon" (click) = "openNewChat()">chat</i>
     <i class="material-icons more" [mdMenuTriggerFor]="menu">more_vert</i>
   </div>
   <md-menu #menu="mdMenu">
@@ -38,6 +26,10 @@
       <span>Log Out</span>
     </button>
   </md-menu>
+  </span>
+</md-card>
+<md-card *ngIf="openChat">
+  <app-new-chat></app-new-chat>
 </md-card>
 <md-card *ngIf = "showId==false" class="example-card" [@flyInOut]="'in'">
 <i class="material-icons" (click)="toggleSelect()">keyboard_backspace</i>
