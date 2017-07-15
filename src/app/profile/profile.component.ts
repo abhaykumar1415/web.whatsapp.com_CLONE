@@ -27,6 +27,8 @@ import {
 export class ProfileComponent implements OnInit {
   showId:boolean=true;
   title = 'app';
+  public chatIcon: boolean=true;
+  public openChat: boolean=false;
   toggleSelect(){
    this.showId =! this.showId;
    console.log(this.showId);
@@ -35,6 +37,11 @@ export class ProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  openNewChat() {
+  console.log("in Open new chat");
+    this.openChat = !this.openChat;
   }
 
 }

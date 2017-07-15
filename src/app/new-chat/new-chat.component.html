@@ -1,0 +1,22 @@
+
+<div class="new-chat" *ngIf="chatIcon">
+  <i class="material-icons" (click) = "openNewChat()">chat</i>
+</div>
+
+<md-card *ngIf="chatIcon != true" [@flyInOut]="'in'">
+  <div class="new-chat-list">
+      <i class="material-icons" (click) = "backButton()">arrow_back</i>
+    <md-nav-list>
+      <h2 md-line>{{newChat}}</h2>
+      <md-list-item *ngFor="let list of person" (click) = "openChatBox(list)">
+        <img md-list-avatar src="{{list.photo}}">
+        <h1 md-line>{{list.name}}</h1>
+        <p md-line>{{list.status}}</p>
+      </md-list-item>
+    </md-nav-list>
+  </div>
+</md-card>
+
+<div class="new-chat-box" *ngIf="chatIcon != false">
+  <md-card *ngIf="userid">{{userid}}</md-card>
+</div>
