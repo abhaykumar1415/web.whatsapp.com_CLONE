@@ -15,6 +15,12 @@ import { WrapperComponent } from './wrapper/wrapper.component';
 import { ChatListComponent } from './chat-list/chat-list.component';
 import { ChatWindowComponent } from './chat-window/chat-window.component';
 import { ProfileComponent } from './profile/profile.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MdCardModule, MdButtonModule, MdCheckboxModule, MdListModule } from '@angular/material';
+import {MdMenuModule} from '@angular/material';
+import 'hammerjs';
+import { NewChatComponent } from './new-chat/new-chat.component';
+
 
 
 export const firebaseConfig = {
@@ -32,7 +38,8 @@ export const firebaseConfig = {
     WrapperComponent,
     ChatListComponent,
     ChatWindowComponent,
-    ProfileComponent
+    ProfileComponent,
+    NewChatComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +47,13 @@ export const firebaseConfig = {
     HttpModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    BrowserAnimationsModule,
+    MdCardModule,
+    MdMenuModule,
+    MdButtonModule,
+    MdCheckboxModule,
+    MdListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

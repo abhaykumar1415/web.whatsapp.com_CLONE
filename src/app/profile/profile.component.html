@@ -1,3 +1,53 @@
-<p>
-  profile works!
-</p>
+<!--The content below is only a placeholder and can be replaced.-->
+<md-card *ngIf = "showId" layout-align="center center">
+<span *ngIf="!openChat">
+  <img src ="http://comicsalliance.com/files/2017/03/Hot-Toys-Spider-Man-Homecoming-Homemade-Suit.jpg" (click)="toggleSelect()" md-card-avatar >
+  <div class="right-align">
+    <i class="material-icons textsms" *ngIf="chatIcon" (click) = "openNewChat()">chat</i>
+    <i class="material-icons more" [mdMenuTriggerFor]="menu">more_vert</i>
+  </div>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item>
+      <span>New Group</span>
+    </button>
+    <button md-menu-item>
+      <span>Profile</span>
+    </button>
+    <button md-menu-item>
+      <span>Archived</span>
+    </button>
+    <button md-menu-item>
+      <span>Starred</span>
+    </button>
+    <button md-menu-item>
+      <span>Settings</span>
+    </button>
+    <button md-menu-item>
+      <span>Log Out</span>
+    </button>
+  </md-menu>
+  </span>
+</md-card>
+<md-card *ngIf="openChat">
+  <app-new-chat></app-new-chat>
+</md-card>
+<md-card *ngIf = "showId==false" class="example-card" [@flyInOut]="'in'">
+<i class="material-icons" (click)="toggleSelect()">keyboard_backspace</i>
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title>Shiba Inu</md-card-title>
+    <md-card-subtitle>Dog Breed</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src="assets/img/examples/shiba2.jpg">
+  <md-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>
