@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule ,Component} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { MaterialModule } from '@angular/material';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { AppComponent } from './app.component';
@@ -15,7 +15,9 @@ import { WrapperComponent } from './wrapper/wrapper.component';
 import { ChatListComponent } from './chat-list/chat-list.component';
 import { ChatWindowComponent } from './chat-window/chat-window.component';
 import { ProfileComponent } from './profile/profile.component';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdButtonModule, MdCheckboxModule, MdGridListModule} from '@angular/material';
+import 'hammerjs';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDuQKnbM5CE_NkIbjcM9i7H64TZPqWylhQ",
@@ -40,7 +42,9 @@ export const firebaseConfig = {
     HttpModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    MaterialModule,
+    MdButtonModule, MdCheckboxModule, MdGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
